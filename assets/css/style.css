@@ -1,0 +1,287 @@
+/* ================================================
+   YOURCRYPTO - Official styles.css
+   Matching dark crypto aesthetic across ALL pages
+   (index.html, trending-coins.html, how-to-buy-crypto.html,
+    where-to-buy-crypto.html, about.html, privacy.html, charts.html)
+   
+   Fonts: Inter + Space Grotesk
+   Accent: #00ff9d (emerald neon)
+   Theme: Deep dark with subtle glassmorphism + neon glows
+   ================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@500;600&amp;display=swap');
+
+:root {
+  --accent: #00ff9d;
+  --accent-dark: #00cc7a;
+  --bg: #0a0a0a;
+  --card: #111111;
+  --border: #27272a;
+  --text-muted: #a3a3a3;
+}
+
+/* ====================== BASE ====================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  background-color: var(--bg);
+  color: #ffffff;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+.logo-font {
+  font-family: 'Space Grotesk', sans-serif;
+  letter-spacing: -2px;
+}
+
+/* ====================== NAVBAR ====================== */
+nav {
+  background-color: rgba(10, 10, 10, 0.95);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+nav .logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+nav .logo span {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.desktop-links a {
+  position: relative;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.desktop-links a:hover {
+  color: var(--accent);
+}
+
+.desktop-links a.active {
+  color: var(--accent);
+  border-bottom: 2px solid var(--accent);
+}
+
+/* Mobile menu glass effect */
+#mobile-menu {
+  background: rgba(17, 17, 17, 0.98);
+  backdrop-filter: blur(20px);
+}
+
+/* ====================== HERO ====================== */
+.hero {
+  background: linear-gradient(180deg, #0a0a0a 0%, #111111 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(0, 255, 157, 0.08) 0%, transparent 70%);
+  animation: hero-glow 25s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes hero-glow {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Live indicator */
+.live-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background: var(--accent);
+  border-radius: 50%;
+  box-shadow: 0 0 12px var(--accent);
+  animation: live-pulse 2s ease-in-out infinite;
+}
+
+@keyframes live-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+
+/* ====================== CARDS & SECTIONS ====================== */
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 
+    0 25px 50px -12px rgb(0 255 157 / 0.15),
+    0 0 0 1px rgb(0 255 157 / 0.2) inset;
+}
+
+.chart-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  padding: 32px;
+}
+
+/* ====================== TABS ====================== */
+.tabs-container {
+  background: #111111;
+  border: 1px solid var(--border);
+  border-radius: 9999px;
+  padding: 6px;
+  display: inline-flex;
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.3);
+}
+
+.tab {
+  padding: 14px 28px;
+  border-radius: 9999px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+}
+
+.tab.active {
+  background: #0a0a0a;
+  color: var(--accent);
+  box-shadow: 0 4px 12px -2px rgb(0 255 157 / 0.3);
+}
+
+/* ====================== CHARTS ====================== */
+.chart-container {
+  position: relative;
+  height: 320px;
+}
+
+canvas {
+  filter: drop-shadow(0 10px 20px rgba(0, 255, 157, 0.1));
+}
+
+/* Chart.js custom overrides */
+.chartjs-tooltip {
+  background: #111111 !important;
+  border: 1px solid var(--accent) !important;
+  border-radius: 12px !important;
+  box-shadow: 0 0 20px rgba(0, 255, 157, 0.3) !important;
+  color: white !important;
+}
+
+/* ====================== BUTTONS ====================== */
+.btn-primary {
+  background: var(--accent);
+  color: #0a0a0a;
+  font-weight: 600;
+  border-radius: 9999px;
+  padding: 14px 32px;
+  box-shadow: 0 0 20px rgba(0, 255, 157, 0.4);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-primary:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 30px rgba(0, 255, 157, 0.6);
+}
+
+.btn-secondary {
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  border-radius: 9999px;
+  padding: 14px 32px;
+}
+
+.btn-secondary:hover {
+  background: rgba(0, 255, 157, 0.1);
+  box-shadow: 0 0 15px rgba(0, 255, 157, 0.4);
+}
+
+/* ====================== FOOTER ====================== */
+footer {
+  background: #0a0a0a;
+  border-top: 1px solid var(--border);
+}
+
+footer a:hover {
+  color: var(--accent);
+}
+
+/* ====================== UTILITIES & ANIMATIONS ====================== */
+.glow-emerald {
+  text-shadow: 0 0 20px rgba(0, 255, 157, 0.6);
+}
+
+.neon-text {
+  animation: neon-flicker 3s infinite alternate;
+}
+
+@keyframes neon-flicker {
+  0%, 19% { text-shadow: 0 0 10px var(--accent); }
+  20%, 24% { text-shadow: none; }
+  25%, 100% { text-shadow: 0 0 20px var(--accent); }
+}
+
+/* Scrollbar - crypto style */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #111111;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--accent);
+  border-radius: 9999px;
+  box-shadow: 0 0 10px var(--accent);
+}
+
+/* Responsive improvements */
+@media (max-width: 768px) {
+  .chart-container {
+    height: 280px;
+  }
+  
+  .hero h1 {
+    font-size: 3rem;
+  }
+}
+
+/* ====================== FINAL TOUCHES ====================== */
+/* Subtle grid background on main sections */
+.main-grid-bg {
+  background-image: 
+    linear-gradient(to right, rgba(0, 255, 157, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 255, 157, 0.03) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+
+/* Price flash animation when updating */
+.price-flash {
+  animation: price-flash-anim 0.8s ease;
+}
+
+@keyframes price-flash-anim {
+  0% { color: var(--accent); }
+  100% { color: inherit; }
+}

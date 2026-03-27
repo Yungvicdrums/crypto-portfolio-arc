@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn how to buy crypto in 5 easy steps - beginner friendly guide for Nigerians and worldwide.">
+    <title>How to Buy Crypto | Step-by-Step Guide 2026</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600&display=swap');
+        
+        :root {
+            --primary: #00ff9d;
+        }
+        
+        body {
+            font-family: 'Inter', system_ui, sans-serif;
+        }
+        
+        .heading-font {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+
+        .hero-bg {
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%);
+        }
+
+        .step-card {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .step-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgb(0 255 157 / 0.1);
+        }
+
+        .accordion-header {
+            transition: all 0.3s ease;
+        }
+    </style>
+</head>
+<body class="bg-[#0a0a0a] text-white">
+
+    <!-- NAVBAR -->
+    <nav class="bg-black/80 backdrop-blur-md border-b border-white/10 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
+            <!-- Logo -->
+            <a href="index.html" class="flex items-center gap-3">
+                <div class="w-9 h-9 bg-emerald-500 rounded-2xl flex items-center justify-center text-2xl font-bold">₿</div>
+                <span class="heading-font text-3xl tracking-tighter">YourCrypto</span>
+            </a>
+
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex items-center gap-10 text-lg">
+                <a href="index.html" class="hover:text-[#00ff9d] transition-colors">Home</a>
+                <a href="trending-coins.html" class="hover:text-[#00ff9d] transition-colors">Trending Coins</a>
+                <a href="how-to-buy-crypto.html" class="text-[#00ff9d] font-semibold">How to Buy</a>
+                <a href="where-to-buy-crypto.html" class="hover:text-[#00ff9d] transition-colors">Where to Buy</a>
+                <a href="about.html" class="hover:text-[#00ff9d] transition-colors">About Me</a>
+                <a href="privacy.html" class="hover:text-[#00ff9d] transition-colors">Privacy</a>
+            </div>
+
+            <!-- Right side -->
+            <div class="flex items-center gap-4">
+                <button onclick="toggleDarkMode()" 
+                        class="w-10 h-10 flex items-center justify-center border border-white/20 rounded-2xl hover:bg-white/10 transition-colors">
+                    <i class="fas fa-moon text-xl"></i>
+                </button>
+                <a href="index.html#portfolio" 
+                   class="bg-[#00ff9d] hover:bg-[#00cc7a] text-black font-semibold px-8 py-3.5 rounded-3xl text-lg transition-all">
+                    View My Portfolio
+                </a>
+                
+                <!-- Mobile Hamburger -->
+                <button onclick="toggleMobileMenu()" class="md:hidden text-3xl">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden md:hidden bg-black/95 border-t border-white/10">
+            <div class="px-6 py-8 flex flex-col gap-6 text-xl">
+                <a href="index.html" class="hover:text-[#00ff9d]">Home</a>
+                <a href="trending-coins.html" class="hover:text-[#00ff9d]">Trending Coins</a>
+                <a href="how-to-buy-crypto.html" class="text-[#00ff9d]">How to Buy Crypto</a>
+                <a href="where-to-buy-crypto.html" class="hover:text-[#00ff9d]">Where to Buy</a>
+                <a href="about.html" class="hover:text-[#00ff9d]">About Me</a>
+                <a href="privacy.html" class="hover:text-[#00ff9d]">Privacy Policy</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero-bg pt-24 pb-20">
+        <div class="max-w-5xl mx-auto px-6 text-center">
+            <div class="inline-flex items-center gap-2 bg-white/10 text-[#00ff9d] text-sm font-medium px-6 py-2 rounded-3xl mb-6">
+                <i class="fas fa-graduation-cap"></i>
+                BEGINNER FRIENDLY
+            </div>
+            
+            <h1 class="heading-font text-6xl md:text-7xl font-semibold leading-tight tracking-tighter mb-6">
+                How to Buy Crypto<br><span class="text-[#00ff9d]">in 5 Simple Steps</span>
+            </h1>
+            
+            <p class="text-xl text-gray-300 max-w-2xl mx-auto mb-10">
+                The complete 2026 guide for beginners — especially made simple for Nigerians. 
+                From zero to your first Bitcoin in under 30 minutes.
+            </p>
+
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="#steps" 
+                   class="bg-[#00ff9d] hover:bg-[#00cc7a] text-black font-semibold text-xl px-10 py-5 rounded-3xl flex items-center gap-3">
+                    Start Buying Now
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+                <a href="where-to-buy-crypto.html" 
+                   class="border border-white/30 hover:border-white/70 text-xl px-10 py-5 rounded-3xl flex items-center gap-3 transition-colors">
+                    See Best Exchanges
+                </a>
+            </div>
+
+            <div class="mt-16 text-sm text-gray-400 flex items-center justify-center gap-8">
+                <div class="flex items-center gap-2">
+                    <i class="fas fa-shield-alt text-[#00ff9d]"></i>
+                    100% Safe & Secure
+                </div>
+                <div class="flex items-center gap-2">
+                    <i class="fas fa-naira-sign text-[#00ff9d]"></i>
+                    Works with Nigerian Banks
+                </div>
+                <div class="flex items-center gap-2">
+                    <i class="fas fa-clock text-[#00ff9d]"></i>
+                    Takes only 30 minutes
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- STEP-BY-STEP GUIDE -->
+    <section id="steps" class="max-w-6xl mx-auto px-6 py-20">
+        <div class="text-center mb-16">
+            <h2 class="heading-font text-5xl font-semibold mb-4">5 Easy Steps to Buy Crypto</h2>
+            <p class="text-gray-400 text-xl">Follow these steps and you'll be holding crypto in no time</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Step 1 -->
+            <div class="step-card bg-zinc-900/70 border border-white/10 rounded-3xl p-8">
+                <div class="flex items-center justify-between mb-6">
+                    <div class="w-12 h-12 bg-[#00ff9d]/10 text-[#00ff9d] rounded-2xl flex items-center justify-center text-3xl font-bold">1</div>
+                    <i class="fas fa-store text-5xl text-[#00ff9d]/30"></i>
+                </div>
+                <h3 class="text-2xl font-semibold mb-3">Choose an Exchange</h3>
+                <p class="text-gray-400 leading-relaxed">Pick a trusted platform. For Nigerians I recommend Binance, Bybit, or local P2P options like Quidax and Busha.</p>
+                <a href="where-to-buy-crypto.html" class="text-[#00ff9d] mt-8 inline-flex items-center gap-2 hover:gap-3 transition-all">
+                    See all platforms →
+                </a>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="step-card bg-zinc-900/70 border border-white/10 rounded-3xl p-8">
+                <div class="flex items-center justify-between mb-6">
+                    <div class="w-12 h-12 bg-[#00ff9d]/10 text-[#00ff9d] rounded-2xl flex items-center justify-center text-3xl font-bold">2</div>
+                    <i class="fas fa-user-plus text-5xl text-[#00ff9d]/30"></i>
+                </div>
+                <h3 class="text-2xl font-semibold mb-3">Create an Account</h3>
+                <p class="text-gray-400 leading-relaxed">Sign up with email or phone number. Use a strong password and enable 2FA immediately.</p>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="step-card bg-zinc-900/70 border border-white/10 rounded-3xl p-8">
+                <div class="flex items-center justify-between mb-6">
+                    <div class="w-12 h-12 bg-[#00ff9d]/10 text-[#00ff9d] rounded-2xl flex items-center justify-center text-3xl font-bold">3</div>
+                    <i class="fas fa-id-card text-5xl text-[#00ff9d]/30"></i>
+                </div>
+                <h3 class="text-2xl font-semibold mb-3">Verify Your Identity (KYC)</h3>
+                <p class="text-gray-400 leading-relaxed">Upload your ID or NIN. Most platforms approve Nigerians within 10-30 minutes.</p>
+            </div>
+
+            <!-- Step 4 -->
+            <div class="step-card bg-zinc-900/70 border border-white/10 rounded-3xl p-8">
+                <div class="flex items-center justify-between mb-6">
+                    <div class="w-12 h-12 bg-[#00ff9d]/10 text-[#00ff9d] rounded-2xl flex items-center justify-center text-3xl font-bold">4</div>
+                    <i class="fas fa-money-bill-wave text-5xl text-[#00ff9d]/30"></i>
+                </div>
+                <h3 class="text-2xl font-semibold mb-3">Deposit Funds</h3>
+                <p class="text-gray-400 leading-relaxed">Fund your account with Naira via bank transfer, Flutterwave, or P2P. No need for USD.</p>
+            </div>
+
+            <!-- Step 5 -->
+            <div class="step-card bg-zinc-900/70 border border-white/10 rounded-3xl p-8">
+                <div class="flex items-center justify-between mb-6">
+                    <div class="w-12 h-12 bg-[#00ff9d]/10 text-[#00ff9d] rounded-2xl flex items-center justify-center text-3xl font-bold">5</div>
+                    <i class="fas fa-chart-line text-5xl text-[#00ff9d]/30"></i>
+                </div>
+                <h3 class="text-2xl font-semibold mb-3">Buy Your First Crypto</h3>
+                <p class="text-gray-400 leading-relaxed">Search for BTC, ETH, USDT or any coin you want, then click "Buy".</p>
+                <div class="mt-8 text-emerald-400 text-sm flex items-center gap-2">
+                    <i class="fas fa-check-circle"></i>
+                    Congratulations! You're now a crypto holder 🎉
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BEGINNER TIPS + SAFETY -->
+    <section class="bg-zinc-950 py-20">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-16">
+                <!-- Safety Checklist -->
+                <div>
+                    <h2 class="text-4xl heading-font font-semibold mb-8">Safety Checklist Before You Buy</h2>
+                    <ul class="space-y-6">
+                        <li class="flex gap-4">
+                            <i class="fas fa-shield-alt text-[#00ff9d] text-2xl mt-1"></i>
+                            <div>
+                                <h4 class="font-semibold text-xl">Enable 2FA</h4>
+                                <p class="text-gray-400">Never skip this. Use Google Authenticator or Authy.</p>
+                            </div>
+                        </li>
+                        <li class="flex gap-4">
+                            <i class="fas fa-lock text-[#00ff9d] text-2xl mt-1"></i>
+                            <div>
+                                <h4 class="font-semibold text-xl">Never share your seed phrase</h4>
+                                <p class="text-gray-400">Not even with customer support.</p>
+                            </div>
+                        </li>
+                        <li class="flex gap-4">
+                            <i class="fas fa-wallet text-[#00ff9d] text-2xl mt-1"></i>
+                            <div>
+                                <h4 class="font-semibold text-xl">Withdraw to your own wallet</h4>
+                                <p class="text-gray-400">Don’t leave large amounts on exchanges.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Common Mistakes -->
+                <div>
+                    <h2 class="text-4xl heading-font font-semibold mb-8 text-red-400">Avoid These 5 Common Mistakes</h2>
+                    <div class="space-y-6 text-gray-300">
+                        <div class="flex items-start gap-4">
+                            <span class="font-mono text-red-500 font-bold text-xl">01</span>
+                            <p>Buying during FOMO without research</p>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <span class="font-mono text-red-500 font-bold text-xl">02</span>
+                            <p>Investing money you can’t afford to lose</p>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <span class="font-mono text-red-500 font-bold text-xl">03</span>
+                            <p>Clicking on fake links or giveaway scams</p>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <span class="font-mono text-red-500 font-bold text-xl">04</span>
+                            <p>Keeping all crypto on one exchange</p>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <span class="font-mono text-red-500 font-bold text-xl">05</span>
+                            <p>Ignoring transaction fees</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- VIDEO TUTORIAL -->
+    <section class="max-w-6xl mx-auto px-6 py-20">
+        <div class="text-center mb-12">
+            <h2 class="heading-font text-5xl font-semibold">Watch the 8-Minute Video Guide</h2>
+            <p class="text-gray-400 mt-3">Real walkthrough using Binance P2P (perfect for Nigerians)</p>
+        </div>
+        
+        <div class="aspect-video bg-black rounded-3xl overflow-hidden border border-white/10">
+            <!-- Replace this src with your actual YouTube embed later -->
+            <iframe class="w-full h-full" 
+                    src="https://www.youtube.com/embed/dQw4w9wgxcQ" 
+                    title="How to Buy Crypto in Nigeria 2026" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+            </iframe>
+        </div>
+        
+        <p class="text-center text-sm text-gray-500 mt-6">* Replace the video above with your own tutorial (highly recommended)</p>
+    </section>
+
+    <!-- FAQ -->
+    <section class="max-w-4xl mx-auto px-6 pb-24">
+        <h2 class="heading-font text-center text-5xl font-semibold mb-12">Frequently Asked Questions</h2>
+        
+        <div class="space-y-4">
+            <div onclick="toggleFaq(this)" class="faq-item bg-zinc-900 rounded-3xl overflow-hidden border border-white/10 cursor-pointer">
+                <div class="accordion-header flex justify-between items-center px-8 py-6">
+                    <h4 class="text-xl font-medium">How much money do I need to start?</h4>
+                    <i class="fas fa-chevron-down transition-transform"></i>
+                </div>
+                <div class="faq-content px-8 pb-8 hidden text-gray-400">
+                    You can start with as little as ₦5,000. Many Nigerians begin with ₦10,000–₦50,000.
+                </div>
+            </div>
+
+            <div onclick="toggleFaq(this)" class="faq-item bg-zinc-900 rounded-3xl overflow-hidden border border-white/10 cursor-pointer">
+                <div class="accordion-header flex justify-between items-center px-8 py-6">
+                    <h4 class="text-xl font-medium">Can I buy crypto with Naira directly?</h4>
+                    <i class="fas fa-chevron-down transition-transform"></i>
+                </div>
+                <div class="faq-content px-8 pb-8 hidden text-gray-400">
+                    Yes! Binance P2P, Bybit, Quidax, and Busha all allow direct Naira deposits and withdrawals.
+                </div>
+            </div>
+
+            <div onclick="toggleFaq(this)" class="faq-item bg-zinc-900 rounded-3xl overflow-hidden border border-white/10 cursor-pointer">
+                <div class="accordion-header flex justify-between items-center px-8 py-6">
+                    <h4 class="text-xl font-medium">Is it safe to buy crypto in Nigeria?</h4>
+                    <i class="fas fa-chevron-down transition-transform"></i>
+                </div>
+                <div class="faq-content px-8 pb-8 hidden text-gray-400">
+                    Yes, as long as you use reputable platforms and follow the safety tips above.
+                </div>
+            </div>
+
+            <div onclick="toggleFaq(this)" class="faq-item bg-zinc-900 rounded-3xl overflow-hidden border border-white/10 cursor-pointer">
+                <div class="accordion-header flex justify-between items-center px-8 py-6">
+                    <h4 class="text-xl font-medium">Do I need to pay tax on crypto profits in Nigeria?</h4>
+                    <i class="fas fa-chevron-down transition-transform"></i>
+                </div>
+                <div class="faq-content px-8 pb-8 hidden text-gray-400">
+                    Currently there is no specific crypto tax law, but FIRS treats crypto gains as capital gains. Always keep records.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="bg-gradient-to-r from-[#00ff9d] to-emerald-600 py-16">
+        <div class="max-w-4xl mx-auto px-6 text-center text-black">
+            <h2 class="text-5xl heading-font font-semibold mb-6">Ready to buy your first crypto?</h2>
+            <p class="text-2xl mb-10">Join thousands of Nigerians already stacking sats</p>
+            <a href="where-to-buy-crypto.html" 
+               class="inline-flex items-center gap-4 bg-black text-white hover:bg-zinc-900 text-2xl font-semibold px-12 py-6 rounded-3xl">
+                Go to Where to Buy Crypto →
+            </a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-black border-t border-white/10 py-16">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-2 md:grid-cols-5 gap-10">
+                <div>
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-9 h-9 bg-emerald-500 rounded-2xl flex items-center justify-center text-2xl font-bold">₿</div>
+                        <span class="heading-font text-3xl tracking-tighter">YourCrypto</span>
+                    </div>
+                    <p class="text-gray-400 text-sm">Your personal crypto journey starts here.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Quick Links</h4>
+                    <div class="flex flex-col gap-3 text-sm text-gray-400">
+                        <a href="trending-coins.html">Trending Coins</a>
+                        <a href="how-to-buy-crypto.html">How to Buy</a>
+                        <a href="where-to-buy-crypto.html">Where to Buy</a>
+                        <a href="about.html">About Me</a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Resources</h4>
+                    <div class="flex flex-col gap-3 text-sm text-gray-400">
+                        <a href="#">Crypto Glossary</a>
+                        <a href="#">Wallet Guide</a>
+                        <a href="#">Tax Guide (Nigeria)</a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Legal</h4>
+                    <div class="flex flex-col gap-3 text-sm text-gray-400">
+                        <a href="privacy.html">Privacy Policy</a>
+                        <a href="#">Disclaimer</a>
+                    </div>
+                </div>
+                <div class="text-sm text-gray-400">
+                    <p class="mb-6">Made with ❤️ in Onitsha, Anambra</p>
+                    <p class="text-xs">© 2026 • Not financial advice. DYOR.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Tailwind script initialization
+        function initializeTailwind() {
+            tailwind.config = {
+                content: ["./**/*.{html,js}"],
+                theme: {
+                    extend: {}
+                }
+            }
+        }
+
+        // Mobile menu toggle
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu')
+            menu.classList.toggle('hidden')
+        }
+
+        // Dark mode toggle (already dark by default)
+        function toggleDarkMode() {
+            alert("This site is built in dark mode by default 🌙\nYou can add light mode later if you want!")
+        }
+
+        // FAQ accordion
+        function toggleFaq(element) {
+            const content = element.querySelector('.faq-content')
+            const icon = element.querySelector('i')
+            
+            content.classList.toggle('hidden')
+            icon.classList.toggle('rotate-180')
+        }
+
+        // Initialize everything
+        window.onload = function() {
+            initializeTailwind()
+            console.log('%c✅ How to Buy Crypto page ready!', 'color:#00ff9d; font-family:monospace')
+        }
+    </script>
+</body>
+</html>
